@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="cont.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+</head>
+<body>
+	<div id="background">
+		<div class="container text-center" id="main">
+			<h1 class="text">Contact us
+		</div>
+	</div>
+    <br><br>
+    <div class="container">
+    	<p>
+
+<h4 class="text-center">GET IN TOUCH WITH US</h4><br>
+<h2 class="text-center">WE'D LOVE TO HEAR FROM YOU</h2>
+</p>
+    </div>
+<br><br><br>
+<section><br><br>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-sm-12 col-12 mr-sm-auto">
+				<h1 class="text-center">email</h1>
+				<p class="text-center">restaurant@sample.com<br>
+                   reserve@sample.com</p>
+			</div><br><br>
+			<div class="col-md-4 col-sm-12 col-12 mr-sm-auto">
+				<h1 class="text-center">Address</h1>
+				<p class="text-center">
+
+             Fira Port 489
+                  <br>
+              Santorini, Greece
+
+               </p>
+			</div><br><br>
+			<div class="col-md-4 col-sm-12 col-12 mr-sm-auto">
+				<h1 class="text-center">phone</h1>
+				<p class="text-center">
+
+             +124237362
+                  <br>
+              +836728162
+
+               </p>
+			</div>
+		</div>
+	</div>
+</section><br><br><br><br>
+<div class="container">
+	<form onsubmit ="return myfun()">
+		<div class="form-group">
+			<label for="user">Name</label>
+			<input type="text" name="" id="user" class="form-control">
+			<span id="fon"></span><br>
+			<label for="email">Email</label>
+			<input type="email" name="" id="email" class="form-control">
+			<span id="fonn"></span><br>
+			<label for="mess">Message</label>
+			<textarea type="Message" name="" id="message " class="form-control"> </textarea><br>
+			<button class="btn btn-outline-dark btn-lg">submit</button>
+		</div>
+	</form>
+</div>
+
+<script>
+	function myfun(){
+		var correct_way=/^[A-Za-z]+$/;
+		var b=document.getElementById('email').value;
+		var a=document.getElementById('user').value;
+		if (a=="") {
+			document.getElementById('fon').innerHTML="**fill username"
+			return false;
+		}
+		if (a.length<3||a.length>20) {
+			document.getElementById('fon').innerHTML="**inalid usernamee"
+			return false;
+		}
+		if(a.match(correct_way))
+			true;
+         else{
+         	document.getElementById('fon').innerHTML="**invalid username"
+			return false;
+         }
+
+         if (b.indexOf('@')<=0) {
+         	document.getElementById('fonn').innerHTML="**invalid email"
+			return false;
+         }
+         if(b.charAt(b.length-4)!='.'){
+         	document.getElementById('fonn').innerHTML="**invalid email"
+			return false;
+         }
+          if(b.charAt(b.length-3)!='.'){
+         	document.getElementById('fonn').innerHTML="**invalid email"
+			return false;
+		}
+		if (b=="") {
+			document.getElementById('fonn').innerHTML="**invalid email"
+			return false;
+		}
+
+	}
+</script>
+
+
+<script>
+if (annyang) {
+  // Let's define our first command. First the text we expect, and then the function it should call
+  var commands = {
+    'type name *tag': function(variable){
+       let name = document.getElementById('user');
+       name.value = variable;
+    },
+    'type email *tag': function(variable){
+       let name = document.getElementById('email');
+       email.value = variable.split(" ").join("");
+    },
+    'type message *tag': function(variable){
+       let message = document.getElementById('message');
+       message.value = variable;
+    }
+  };
+
+  // Add our commands to annyang
+  annyang.addCommands(commands);
+
+  // Start listening. You can call this here, or attach this call to an event, button, etc.
+  annyang.start();
+}
+</script>
+</body>
+</html>
