@@ -136,7 +136,7 @@ height:125px;
 	top: 15%;
 	background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://images.pexels.com/photos/461428/pexels-photo-461428.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500/');
 	background-size: cover;
-	left: 15%;
+	left: 12%;
 	transform-translate:(-50%, -50%);
 	position: absolute;
 	box-shadow: 10px,5px,5px,10px white;
@@ -156,7 +156,7 @@ height:125px;
 
    .item{
 	margin-top: 80px;
-      font-size: 80px;
+      font-size: 70px;
       color:white;
 }
  
