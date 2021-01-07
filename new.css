@@ -153,5 +153,11 @@ height:125px;
   #text{
 	margin-top: 200px;
 }
-    
+
+   item{
+	margin-top: 80px;
+      font-size: 80px;
+      color:white;
+}
+ 
 }
